@@ -1,0 +1,1 @@
+Hi. My name is Nikita. This is my first notes app with the ability to record audio. Technologies used: Pattern Clean Architecture+MVVM, Jet Pack Compose, Flow, Coroutine,Room, Internal storage. The application needs to be improved! It is necessary to make it possible to download media content.
