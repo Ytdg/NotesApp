@@ -41,19 +41,22 @@ fun SongContent(
     modifier: Modifier,
     onPlay: () -> Unit,
     onStop: () -> Unit,
-    openContexMenu:()->Unit,
+    openContexMenu: () -> Unit,
     isActive: Boolean,
     cardColors: CardColors,
     duration: String
 ) {
-    val interation= remember {
+    val interation = remember {
         MutableInteractionSource()
     }
     Card(
-        modifier = modifier.clip(RoundedCornerShape(16.dp)).combinedClickable(
-            interactionSource = interation,
-            indication = rememberRipple(true),
-            onClick = { if (isActive) onStop() else onPlay() }, onLongClick = {openContexMenu()}),
+        modifier = modifier
+            .clip(RoundedCornerShape(16.dp))
+            .combinedClickable(
+                interactionSource = interation,
+                indication = rememberRipple(true),
+                onClick = { if (isActive) onStop() else onPlay() },
+                onLongClick = { openContexMenu() }),
         colors = cardColors,
         shape = RoundedCornerShape(16.dp)
     ) {
@@ -73,7 +76,7 @@ fun SongContent(
                 modifier = Modifier
                     .align(Alignment.BottomEnd)
                     .padding(bottom = 12.dp, end = 30.dp),
-                color=Color(137, 98, 248)
+                color = Color(137, 98, 248)
             )
         }
     }
